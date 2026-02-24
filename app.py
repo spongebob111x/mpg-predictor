@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load('best_model.pkl')
+model = joblib.load('best_model (1).pkl')
 
 st.title('Auto MPG Predictor')
 
@@ -25,3 +25,4 @@ input_df = pd.DataFrame([[cylinders, displacement, horsepower,
 if st.button('Predict MPG'):
     prediction = model.predict(input_df)[0]
     st.success(f'Predicted MPG: {prediction:.2f}')
+
